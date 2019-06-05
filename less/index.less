@@ -67,7 +67,7 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
@@ -78,7 +78,7 @@ html, body {
     height: 100%;
 }
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
 	font-size: 3rem;
 }
 
@@ -86,10 +86,23 @@ a {
 	text-decoration: none;
 }
 
+.container {
+	max-width: 880px;
+	margin: 2rem auto;
+}
+
+p {
+	font-size: 1.4rem;
+}
+
+section {
+	margin: 2rem auto;
+}
+
 header {
-	max-width: 100%;
 	.center();
-	
+	margin-bottom: 1.2rem;
+
 	nav {
 		font-size: 1.4rem;
 
@@ -99,8 +112,4 @@ header {
 	}
 }
 
-.container {
-	width: 880px;
-	margin: 2rem auto;
-}
 
