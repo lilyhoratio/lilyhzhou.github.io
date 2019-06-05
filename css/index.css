@@ -126,6 +126,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.space_between_column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.space_between_row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -143,14 +153,17 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Open Sans';
   font-size: 3rem;
+}
+p,
+li {
+  font-family: 'Open Sans';
+  font-size: 1.4rem;
 }
 a {
   text-decoration: none;
-}
-.container {
-  max-width: 880px;
-  margin: 2rem auto;
+  font-family: 'Ubuntu Mono';
 }
 p {
   font-size: 1.4rem;
@@ -164,9 +177,56 @@ header {
   align-items: center;
   margin-bottom: 1.2rem;
 }
+header h1 {
+  font-family: 'Ubuntu Mono';
+}
 header nav {
   font-size: 1.4rem;
 }
 header nav a {
   margin-left: 3rem;
+}
+.container {
+  max-width: 840px;
+  margin: 2rem auto;
+}
+.container h2 {
+  font-size: 2em;
+}
+.container h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.container .section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container ul {
+  list-style-type: disc;
+  padding-left: 2.4em;
+  margin-bottom: 1.2rem;
+}
+.container .work-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container .work-container .work-entry {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container .work-container .work-entry .company {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+}
+.container .work-container .work-entry .role {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
 }

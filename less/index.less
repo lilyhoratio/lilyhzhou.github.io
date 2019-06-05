@@ -51,17 +51,29 @@ table {
 // Lily's edits start here
 
 // Variables 
-@margin: 2rem auto;
+@um: 'Ubuntu Mono';
+@os: 'Open Sans';
+@margin_center: 2rem auto;
+@margin_bottom: 1.2rem;
 
 // Mixins
-.codeFont() {
-	
-}
 
 .center() {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+}
+
+.space_between_column {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.space_between_row {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
 }
 
 // General
@@ -80,16 +92,18 @@ html, body {
 }
 
 h1,h2,h3,h4,h5,h6 {
+	font-family: @os;
 	font-size: 3rem;
+}
+
+p,li {
+	font-family: @os;
+	font-size: 1.4rem;
 }
 
 a {
 	text-decoration: none;
-}
-
-.container {
-	max-width: 880px;
-	margin: @margin;
+	font-family: @um;
 }
 
 p {
@@ -97,12 +111,19 @@ p {
 }
 
 section {
-	margin: @margin;
+	margin: @margin_center;
 }
 
 header {
-	.center();
-	margin-bottom: 1.2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: @margin_bottom;
+
+	h1 {
+		font-family: @um;
+	}
 
 	nav {
 		font-size: 1.4rem;
@@ -110,7 +131,54 @@ header {
 		a {
 			margin-left: 3rem;
 		}
+	}//nav
+}//header
+
+// Main resume content
+
+.container {
+	max-width: 840px;
+	margin: @margin_center;
+
+	h2 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1.8em;
+		font-weight: bold;
+	}
+
+	.section-title {
+		.center();
+	}	
+
+	ul {
+		list-style-type: disc;
+		padding-left: 2.4em;
+		margin-bottom: @margin_bottom;
+	}
+
+	.work-container {
+		.space_between_column;
+	
+		.work-entry {
+			margin: @margin_center;
+			.space_between_column;
+
+			.company {
+				.space_between_row;
+				margin-bottom: @margin_bottom;
+			}
+
+			.role {
+				.space_between_row;
+				margin-bottom: @margin_bottom;
+			}
+		}
+
 	}
 }
+
 
 
