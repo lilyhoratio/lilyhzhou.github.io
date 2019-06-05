@@ -51,10 +51,15 @@ table {
 // Lily's edits start here
 
 // Variables 
+@background-color: @firefly;
+@text-color: @white;
+
 @um: 'Ubuntu Mono';
 @os: 'Open Sans';
-@margin_center: 2rem auto;
+@margin_center: 3rem auto;
 @margin_bottom: 1.2rem;
+@firefly: #0D1F2D;
+@white: #EEF0F2;
 
 // Mixins
 
@@ -91,23 +96,27 @@ html, body {
     height: 100%;
 }
 
+body {
+	background-color: @background-color;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	font-family: @os;
-	font-size: 3rem;
+	font-size: 4rem;
+	color: @text-color;
 }
 
 p,li {
 	font-family: @os;
 	font-size: 1.4rem;
+	color: @text-color;
+	line-height: 1.6; // not working
 }
 
 a {
 	text-decoration: none;
 	font-family: @um;
-}
-
-p {
-	font-size: 1.4rem;
+	color: #B1EDE8;
 }
 
 section {
@@ -123,13 +132,14 @@ header {
 
 	h1 {
 		font-family: @um;
+		color: #FF6978;
 	}
 
 	nav {
 		font-size: 1.4rem;
 
 		@media (max-width: 500px) {
-			
+
 		}
 
 		a {
@@ -149,7 +159,7 @@ header {
 	}
 
 	h3 {
-		font-size: 1.8em;
+		font-size: 1.6em;
 		font-weight: bold;
 	}
 
