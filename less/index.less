@@ -50,6 +50,9 @@ table {
 
 // Lily's edits start here
 
+// Variables 
+@margin: 2rem auto;
+
 // Mixins
 .codeFont() {
 	
@@ -60,8 +63,6 @@ table {
 	justify-content: space-between;
 	align-items: center;
 }
-
-// Variables 
 
 // General
 
@@ -88,7 +89,7 @@ a {
 
 .container {
 	max-width: 880px;
-	margin: 2rem auto;
+	margin: @margin;
 }
 
 p {
@@ -96,7 +97,7 @@ p {
 }
 
 section {
-	margin: 2rem auto;
+	margin: @margin;
 }
 
 header {
