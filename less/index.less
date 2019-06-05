@@ -53,6 +53,7 @@ table {
 // Variables 
 @background-color: @firefly;
 @text-color: @white;
+@pop-color: @wildwatermelon;
 
 @um: 'Ubuntu Mono';
 @os: 'Open Sans';
@@ -60,6 +61,7 @@ table {
 @margin_bottom: 1.2rem;
 @firefly: #0D1F2D;
 @white: #EEF0F2;
+@wildwatermelon : #FF6978;
 
 // Mixins
 
@@ -132,20 +134,35 @@ header {
 
 	h1 {
 		font-family: @um;
-		color: #FF6978;
+		color: @pop-color;
 	}
 
 	nav {
 		font-size: 1.4rem;
 
-		@media (max-width: 500px) {
-
-		}
-
 		a {
 			margin-left: 3rem;
+			
+			// is it necessary to have all these nested media tags?
+			@media (max-width: 500px) {
+				margin-bottom: @margin_bottom;
+			} 
+		}
+
+		a:hover {
+			color: @pop-color;
+		}
+
+		@media (max-width: 500px) {
+			.space_between_column;
+			order: -1;
 		}
 	}//nav
+
+	@media (max-width: 500px) {
+		.space_between_column;
+		margin-bottom: @margin_bottom;
+	}
 }//header
 
 // Main resume content
@@ -154,12 +171,17 @@ header {
 	max-width: 840px;
 	margin: @margin_center;
 
+	@media (max-width: 500px) {
+		margin-right: 2rem;
+		margin-left: 2rem;
+	}
+
 	h2 {
-		font-size: 2em;
+		font-size: 2rem;
 	}
 
 	h3 {
-		font-size: 1.6em;
+		font-size: 1.6rem;
 		font-weight: bold;
 	}
 

@@ -191,15 +191,45 @@ header nav {
 header nav a {
   margin-left: 3rem;
 }
+@media (max-width: 500px) {
+  header nav a {
+    margin-bottom: 1.2rem;
+  }
+}
+header nav a:hover {
+  color: #FF6978;
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    order: -1;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+  }
+}
 .container {
   max-width: 840px;
   margin: 3rem auto;
 }
+@media (max-width: 500px) {
+  .container {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+}
 .container h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 .container h3 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 .container .section-title {
