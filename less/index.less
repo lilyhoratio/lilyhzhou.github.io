@@ -48,26 +48,59 @@ table {
 	border-spacing: 0;
 }
 
+// Lily's edits start here
+
+// Mixins
+.codeFont() {
+	
+}
+
+.center() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// Variables 
+
+// General
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 html, body {
     height: 100%;
 }
 
-// Lily's edits start here
+h1 {
+	font-size: 3rem;
+}
 
-// Mixins
+a {
+	text-decoration: none;
+}
 
-// Variables 
+header {
+	max-width: 100%;
+	.center();
+	
+	nav {
+		font-size: 1.4rem;
 
-// LESS
-
-body {
-	h1 {
-		color: red;
+		a{
+			margin-left: 3rem;
+		}
 	}
+}
+
+.container {
+	width: 880px;
+	margin: 2rem auto;
 }
 
