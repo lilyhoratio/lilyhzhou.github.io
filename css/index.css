@@ -218,13 +218,13 @@ header nav a {
   justify-content: space-between;
   flex-direction: column;
 }
-.container .work-container .work-entry .company {
+.container .institute {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 1.2rem;
 }
-.container .work-container .work-entry .role {
+.container .role {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
