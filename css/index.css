@@ -165,7 +165,7 @@ a {
   color: #B1EDE8;
 }
 section {
-  margin: 3rem auto;
+  margin: 3rem auto 6rem;
 }
 .container {
   max-width: 840px;
@@ -209,6 +209,7 @@ section {
 }
 .container header nav a {
   margin-left: 3rem;
+  transition: font-size 1s;
 }
 @media (max-width: 500px) {
   .container header nav a {
@@ -217,6 +218,7 @@ section {
 }
 .container header nav a:hover {
   color: #FF6978;
+  font-size: 110%;
 }
 @media (max-width: 500px) {
   .container header nav {
@@ -240,6 +242,7 @@ section {
   font-family: 'Ubuntu Mono';
 }
 .container h3 {
+  color: #FF6978;
   font-size: 1.6rem;
   font-weight: bold;
 }
@@ -260,19 +263,25 @@ section {
   padding-left: 2.4em;
   margin-bottom: 1.2rem;
 }
-.container .work-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
 .container .work-container .work-entry {
   margin: 3rem auto;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding: 2.8rem;
-  box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.08);
   background-color: #12283B;
+}
+.container .education-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.container .education-content .education-entry {
+  padding: 0 3rem;
+}
+.container .education-content .education-entry h3 {
+  margin-bottom: 1.2rem;
 }
 .container .institute {
   display: flex;
@@ -285,4 +294,7 @@ section {
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 1.2rem;
+}
+.container .date {
+  font-style: italic;
 }
