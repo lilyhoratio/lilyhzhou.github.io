@@ -185,7 +185,7 @@ section {
 				background-position: 0 100%;
 				background-repeat: repeat-x;
 				background-size: 3px 1px;
-				transition: background-size .4s;
+				transition: background-size 0.8s;
 				
 				@media (max-width: 500px) {
 					margin-bottom: @margin_bottom;
@@ -232,8 +232,7 @@ section {
 		transform: skew(-15deg);
 		border-radius: 2px;
 
-		@media (max-width: 500px) {
-			.center; // why doesn't the media query inherit the .center from above??
+		@media @mobile {
 			width: 50%;
 		}
 	}
