@@ -220,6 +220,8 @@ section {
   .container header nav a {
     margin-bottom: 1.2rem;
     font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
   }
 }
 .container header nav a:hover {
