@@ -126,22 +126,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.space_between_column {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.space_between_row {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -149,6 +140,7 @@ body {
 }
 body {
   background-color: #0D1F2D;
+  margin: 2em;
 }
 h1,
 h2,
@@ -186,6 +178,8 @@ section {
   }
 }
 .container header {
+  width: 90%;
+  margin: 3rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -241,7 +235,9 @@ section {
   }
 }
 .container h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: #0D1F2D;
+  font-family: 'Ubuntu Mono';
 }
 .container h3 {
   font-size: 1.6rem;
@@ -251,6 +247,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  background-color: #FF6978;
+  margin: 3rem auto;
+  width: 25%;
+  padding: 6px 0;
+  transform: skew(-15deg);
+  border-radius: 2px;
 }
 .container ul {
   list-style-type: disc;
@@ -267,6 +270,9 @@ section {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding: 2.8rem;
+  box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: #12283B;
 }
 .container .institute {
   display: flex;
