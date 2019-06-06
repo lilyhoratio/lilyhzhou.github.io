@@ -64,6 +64,9 @@ table {
 @white: #EEF0F2;
 @wildwatermelon : #FF6978;
 
+// Devices
+@mobile: ~"(max-width: 500px)";
+
 // Mixins
 
 .center() {
@@ -134,7 +137,7 @@ section {
 	max-width: 840px;
 	margin: @margin_center;
 
-	@media (max-width: 500px) {
+	@media @mobile {
 		margin-right: 2rem;
 		margin-left: 2rem;
 	}
@@ -252,15 +255,21 @@ section {
 	.education-content {
 		.space_between_row();
 
+		@media @mobile {
+			.space_between_column();
+		}
+
 		.education-entry {
 			padding: 0 3rem;
 				
 			h3 {
 				margin-bottom: @margin_bottom;
 			}
+
+			@media @mobile {
+				margin-bottom: @margin_bottom;
+			}
 		}
-
-
 	}
 
 	.institute {
