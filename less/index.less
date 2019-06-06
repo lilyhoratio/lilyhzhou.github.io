@@ -177,16 +177,25 @@ section {
 	
 			a {
 				margin-left: 3rem;
-				transition: font-size 1s;
+				padding: 3px 0 3px 0;
+				background: linear-gradient(
+								to bottom, @link-color 0%,
+								@pop-color 80%
+							);
+				background-position: 0 100%;
+				background-repeat: repeat-x;
+				background-size: 3px 1px;
+				transition: background-size .4s;
 				
 				@media (max-width: 500px) {
 					margin-bottom: @margin_bottom;
+					font-size: 2rem;
 				} 
 			}
 	
 			a:hover {
-				color: @pop-color;
-				font-size: 110%;
+				color: @primary-color;
+				background-size: 4px 50px;
 			}
 	
 			@media (max-width: 500px) {
