@@ -48,12 +48,253 @@ table {
 	border-spacing: 0;
 }
 
+// Lily's edits start here
+
+// Variables 
+@primary-color: @firefly;
+@text-color: @white;
+@pop-color: @wildwatermelon;
+@link-color: #84EBE2;
+@section-background: #12283B;
+@um: 'Ubuntu Mono';
+@os: 'Open Sans';
+@margin_center: 3rem auto;
+@margin_bottom: 1.2rem;
+@firefly: #0D1F2D;
+@white: #EEF0F2;
+@wildwatermelon : #FF6978;
+
+// Devices
+@mobile: ~"(max-width: 500px)";
+
+// Mixins
+
+.center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.space_between_column() {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.space_between_row() {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+// General
+
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+
+body {
+	background-image: linear-gradient(to right, #0D1F2D 0%, #12283B 100%);
+	margin: 2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: @os;
+	font-size: 4rem;
+	color: @text-color;
+}
+
+p,li {
+	font-family: @os;
+	font-size: 1.4rem;
+	color: @text-color;
+	line-height: 1.6; // not working
+}
+
+a {
+	text-decoration: none;
+	font-family: @um;
+	color: @link-color;
+}
+
+section {
+	margin: 3rem auto 6rem;
+}
+
+// Main resume content
+
+.container {
+	max-width: 840px;
+	margin: @margin_center;
+
+	@media @mobile {
+		margin-right: 2rem;
+		margin-left: 2rem;
+	}
+
+	header {
+		width: 90%;
+		margin: @margin_center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: @margin_bottom;
+	
+		h1 {
+			font-family: @um;
+			color: @pop-color;
+			animation-duration: 2s;
+			animation-name: bounceIn;
+	
+		}
+	
+		@keyframes bounceIn {
+			0% {
+			transform: scale(0.8);
+			opacity: 0;
+			}
+			60% {
+			transform: scale(1.1);
+			opacity: 1;
+			}
+			100% {
+			transform: scale(1);
+			}
+		}
+	
+		nav {
+			font-size: 1.4rem;
+	
+			a {
+				margin-left: 3rem;
+				padding: 3px 0 3px 0;
+				background: linear-gradient(
+								to bottom, @link-color 0%,
+								@pop-color 80%
+							);
+				background-position: 0 100%;
+				background-repeat: repeat-x;
+				background-size: 3px 1px;
+				transition: background-size .4s;
+				
+				@media (max-width: 500px) {
+					margin-bottom: @margin_bottom;
+					font-size: 2rem;
+				} 
+			}
+	
+			a:hover {
+				color: @primary-color;
+				background-size: 4px 50px;
+			}
+	
+			@media (max-width: 500px) {
+				.space_between_column;
+				order: -1;
+			}
+		}//nav
+	
+		@media (max-width: 500px) {
+			.space_between_column;
+			margin-bottom: @margin_bottom;
+		}
+	}//header
+
+	h2 {
+		font-size: 1.8rem;
+		color: @primary-color;
+		font-family: @um;
+	}
+
+	h3 {
+		color: @pop-color;
+		font-size: 1.6rem;
+		font-weight: bold;
+	}
+
+	.section-title {
+		.center;
+		text-align: center;
+		background-color: @pop-color;
+		margin: @margin_center;
+		width: 25%;
+		padding: 6px 0;
+		transform: skew(-15deg);
+		border-radius: 2px;
+
+		@media (max-width: 500px) {
+			.center; // why doesn't the media query inherit the .center from above??
+			width: 50%;
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+		padding-left: 2.4em;
+		margin-bottom: @margin_bottom;
+	}
+
+	.work-container {
+		// .space_between_column;
+	
+		.work-entry {
+			margin: @margin_center;
+			.space_between_column;
+			padding: 2.8rem;
+			box-shadow: 0 1px 4px 4px rgba(0,0,0,0.08);
+			background-color: @section-background;
+		}
+
+		.work-entry:hover {
+			transform: scale(1.01);
+		}
+
+	}
+
+	.education-content {
+		.space_between_row();
+
+		@media @mobile {
+			.space_between_column();
+		}
+
+		.education-entry {
+			padding: 0 3rem;
+				
+			h3 {
+				margin-bottom: @margin_bottom;
+			}
+
+			@media @mobile {
+				margin-bottom: @margin_bottom;
+			}
+		}
+	}
+
+	.institute {
+		.space_between_row;
+		margin-bottom: @margin_bottom;
+	}
+
+	.role {
+		.space_between_row;
+		margin-bottom: @margin_bottom;
+	}
+
+	.date {
+		font-style: italic;
+	}
+}
+
+
 
