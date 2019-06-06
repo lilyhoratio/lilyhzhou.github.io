@@ -139,7 +139,7 @@ body {
   height: 100%;
 }
 body {
-  background-color: #0D1F2D;
+  background-image: linear-gradient(to right, #0D1F2D 0%, #12283B 100%);
   margin: 2em;
 }
 h1,
