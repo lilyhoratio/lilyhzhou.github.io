@@ -56,13 +56,16 @@ table {
 @pop-color: @wildwatermelon;
 @link-color: #84EBE2;
 @section-background: #12283B;
-@um: 'Ubuntu Mono';
-@os: 'Open Sans';
 @margin_center: 3rem auto;
 @margin_bottom: 1.2rem;
 @firefly: #0D1F2D;
 @white: #EEF0F2;
 @wildwatermelon : #FF6978;
+
+// Fonts
+@um: 'Ubuntu Mono';
+@os: 'Open Sans';
+@rm: 'Roboto Mono';
 
 // Devices
 @mobile: ~"(max-width: 500px)";
@@ -123,7 +126,7 @@ p,li {
 
 a {
 	text-decoration: none;
-	font-family: @um;
+	font-family: @rm;
 	color: @link-color;
 }
 
@@ -151,26 +154,42 @@ section {
 		margin-bottom: @margin_bottom;
 	
 		h1 {
-			font-family: @um;
+			font-family: @rm;
 			color: @pop-color;
-			animation-duration: 2s;
-			animation-name: bounceIn;
+			// animation-duration: 2s;
+			// animation-name: bounceIn;
 	
+			&::after {
+				content: "";
+				// position: absolute;
+				display: inline-block;
+				background-color: @pop-color;
+				vertical-align: baseline;
+				width: 1.6rem;
+				height: 3.2rem; /* set to height of text */
+				animation: blink 1s step-end infinite;
+			
+			}
+			@keyframes blink {
+				0% { opacity: 1.0; }
+				50% { opacity: 0.0; }
+				100% { opacity: 1.0; }
+			}
 		}
 	
-		@keyframes bounceIn {
-			0% {
-			transform: scale(0.8);
-			opacity: 0;
-			}
-			60% {
-			transform: scale(1.1);
-			opacity: 1;
-			}
-			100% {
-			transform: scale(1);
-			}
-		}
+		// @keyframes bounceIn {
+		// 	0% {
+		// 	transform: scale(0.8);
+		// 	opacity: 0;
+		// 	}
+		// 	60% {
+		// 	transform: scale(1.1);
+		// 	opacity: 1;
+		// 	}
+		// 	100% {
+		// 	transform: scale(1);
+		// 	}
+		// }
 	
 		nav {
 			font-size: 1.4rem;

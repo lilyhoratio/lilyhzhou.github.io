@@ -161,7 +161,7 @@ li {
 }
 a {
   text-decoration: none;
-  font-family: 'Ubuntu Mono';
+  font-family: 'Roboto Mono';
   color: #84EBE2;
 }
 section {
@@ -186,22 +186,28 @@ section {
   margin-bottom: 1.2rem;
 }
 .container header h1 {
-  font-family: 'Ubuntu Mono';
+  font-family: 'Roboto Mono';
   color: #FF6978;
-  animation-duration: 2s;
-  animation-name: bounceIn;
 }
-@keyframes bounceIn {
+.container header h1::after {
+  content: "";
+  display: inline-block;
+  background-color: #FF6978;
+  vertical-align: baseline;
+  width: 1.6rem;
+  height: 3.2rem;
+  /* set to height of text */
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
   0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.1);
     opacity: 1;
   }
+  50% {
+    opacity: 0;
+  }
   100% {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 .container header nav {
