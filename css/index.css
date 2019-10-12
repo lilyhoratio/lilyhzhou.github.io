@@ -144,6 +144,9 @@ html {
   --flame-pea: #d05a34;
   --governer-bay-blue: #2d2ea2;
   --tulip-tree-peach: #e69b46;
+  --roof-terracotta: #9c2921;
+  --blue: #3c52d1;
+  --eastern-blue: #139fac;
 }
 
 /* --------------------------------------------------*/
@@ -154,6 +157,7 @@ body {
 body {
   background-color: var(--cinderella-pink);
   margin: 2em;
+  font-family: "Roboto Mono", "Helvetica Neue", Helvetica;
 }
 h1,
 h2,
@@ -174,11 +178,11 @@ li {
 }
 a {
   text-decoration: none;
-  font-family: "Roboto Mono";
-  color: #84ebe2;
+  font-family: "Open Sans";
+  color: var(--governer-bay-blue);
 }
 section {
-  margin: 3rem auto 6rem;
+  margin: 3rem auto;
 }
 .container {
   max-width: 840px;
@@ -205,11 +209,15 @@ section {
 .container header nav a {
   margin-left: 3rem;
   padding: 3px 0 3px 0;
-  background: linear-gradient(to bottom, #84ebe2 0%, #ff6978 80%);
+  background: linear-gradient(
+    to bottom,
+    var(--roof-terracotta) 0%,
+    var(--flame-pea) 80%
+  );
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 3px 1px;
-  transition: background-size 0.8s;
+  transition: background-size 0.6s;
 }
 @media (max-width: 500px) {
   .container header nav a {
@@ -220,7 +228,7 @@ section {
   }
 }
 .container header nav a:hover {
-  color: #0d1f2d;
+  color: var(--governer-bay-blue);
   background-size: 4px 50px;
 }
 @media (max-width: 500px) {
@@ -238,4 +246,26 @@ section {
     flex-direction: column;
     margin-bottom: 1.2rem;
   }
+}
+
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.intro-container .name-container .first-name,
+.intro-container .name-container .last-name {
+  display: flex;
+  /* align-items: flex-start; */
+  align-items: center;
+  font-size: 13rem;
+  width: 50rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual letters */
+.intro-container .name-container .first-name > *,
+.intro-container .name-container .last-name > * {
+  color: var(--tulip-tree-peach);
+  text-shadow: 8px 6px 0 var(--governer-bay-blue);
 }
