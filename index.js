@@ -48,7 +48,7 @@ TweenMax.to(o, 3.5, {
 TweenLite.to(z, 1, {
   rotation: 15,
   ease: Elastic.easeOut
-}).delay(1.3);
+}).delay(1.4);
 
 z.addEventListener("mouseenter", () => {
   TweenMax.to(z, 3, {
