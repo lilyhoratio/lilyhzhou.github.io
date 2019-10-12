@@ -269,3 +269,12 @@ section {
   color: var(--tulip-tree-peach);
   text-shadow: 8px 6px 0 var(--governer-bay-blue);
 }
+
+.intro-container .name-container .first-name .l:first-of-type {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 40 40" xml:space="preserve" height="12px" width="12px"><g ><circle fill="white" r="10" cx="12" cy="12"/></g></svg>');
+  /* color: transparent; */
+}
+
+/* .intro-container .name-container .last-name .z {
+  transform: rotate(10deg);
+} */
