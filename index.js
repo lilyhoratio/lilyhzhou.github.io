@@ -38,8 +38,8 @@ TweenMax.staggerFrom(
 // });
 
 // // letter o rotates
-TweenMax.to(o, 4, {
-  //   repeat: 1,
+TweenMax.to(o, 3.5, {
+  // repeat: 1,
   rotation: "+=360",
   transformOrigin: "50% 50%",
   ease: Elastic.easeOut
@@ -47,7 +47,7 @@ TweenMax.to(o, 4, {
 
 TweenLite.to(z, 1, {
   rotation: 15,
-  ease: Bounce.easeOut
+  ease: Elastic.easeOut
 }).delay(1.3);
 
 z.addEventListener("mouseenter", () => {

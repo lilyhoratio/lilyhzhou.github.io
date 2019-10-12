@@ -164,17 +164,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Open Sans";
-  font-size: 4rem;
-  color: #eef0f2;
-}
+h6,
 p,
 li {
   font-family: "Open Sans";
   font-size: 1.4rem;
-  color: #eef0f2;
   line-height: 1.6;
+  color: var(--governer-bay-blue);
 }
 a {
   text-decoration: none;
@@ -185,7 +181,7 @@ section {
   margin: 3rem auto;
 }
 .container {
-  max-width: 840px;
+  max-width: 1000px;
   margin: 3rem auto;
 }
 @media (max-width: 500px) {
@@ -208,10 +204,10 @@ section {
 }
 .container header nav a {
   margin-left: 3rem;
-  padding: 3px 0 3px 0;
+  padding: 3px 0;
   background: linear-gradient(
     to bottom,
-    var(--roof-terracotta) 0%,
+    var(--governer-bay-blue) 20%,
     var(--flame-pea) 80%
   );
   background-position: 0 100%;
@@ -228,7 +224,7 @@ section {
   }
 }
 .container header nav a:hover {
-  color: var(--governer-bay-blue);
+  color: var(--cinderella-pink);
   background-size: 4px 50px;
 }
 @media (max-width: 500px) {
@@ -252,15 +248,16 @@ section {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding-left: 2rem;
 }
 .intro-container .name-container .first-name,
 .intro-container .name-container .last-name {
   display: flex;
-  /* align-items: flex-start; */
+  align-items: flex-start;
   align-items: center;
-  font-size: 13rem;
+  font-size: 16rem;
+  margin-top: 2rem;
   width: 50rem;
-  margin-bottom: 2rem;
 }
 
 /* Individual letters */
@@ -268,6 +265,7 @@ section {
 .intro-container .name-container .last-name > * {
   color: var(--tulip-tree-peach);
   text-shadow: 8px 6px 0 var(--governer-bay-blue);
+  width: 50rem;
 }
 
 .intro-container .name-container .first-name .l:first-of-type {
@@ -275,6 +273,75 @@ section {
   /* color: transparent; */
 }
 
-/* .intro-container .name-container .last-name .z {
-  transform: rotate(10deg);
-} */
+.projects-container {
+  margin-top: 12rem;
+}
+
+.projects-container h2 {
+  font-size: 4rem;
+  border-top: 5px dotted white;
+  border-bottom: 5px dotted var(--wheat-peach);
+}
+
+.projects-container .project {
+  display: flex;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.projects-container .project .project-image,
+.projects-container .project .project-text {
+  width: 49%;
+}
+
+.projects-container .project .project-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.6rem;
+}
+
+.projects-container .project .project-links a {
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid var(--tulip-tree-peach);
+  /* background-color: var(--tulip-tree-peach); */
+  border-radius: 2px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* box-shadow: 0 6px 6px -6px var(--tulip-tree-peach); */
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.projects-container .project .project-links a:hover {
+  box-shadow: 0 0 4px var(--governer-bay-blue);
+  border: var(--governer-bay-blue);
+  transform: skew(-10deg);
+}
+
+.projects-container .project .project-links a {
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid var(--tulip-tree-peach);
+  /* background-color: var(--tulip-tree-peach); */
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* box-shadow: 0 6px 6px -6px var(--tulip-tree-peach); */
+}
+
+.projects-container .project .project-image img {
+  width: 95%;
+}
+
+.projects-container .project .project-text h3 {
+  font-size: 4rem;
+  font-family: "Roboto Mono";
+  text-shadow: 2px 2px 0 var(--tulip-tree-peach);
+}
