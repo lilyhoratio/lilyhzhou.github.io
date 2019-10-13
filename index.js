@@ -16,7 +16,7 @@ TweenMax.staggerFrom(
   1,
   {
     ease: Elastic.easeOut,
-    scale: 0.5
+    scale: 0.7
   },
   0.2
 );

@@ -138,15 +138,15 @@ html {
 /* --------------------------------------------------*/
 /* Variables */
 :root {
-  --revolver-purple: #261738;
   --cinderella-pink: #fee8dd;
   --wheat-peach: #f5ceb4;
   --flame-pea: #d05a34;
   --governer-bay-blue: #2d2ea2;
   --tulip-tree-peach: #e69b46;
-  --roof-terracotta: #9c2921;
   --blue: #3c52d1;
-  --eastern-blue: #139fac;
+  --light-blue: #4a8ffe;
+  --lavender: #8f6ebe;
+  --text-shadow-headers: 1px 2px 1px var(--light-blue);
 }
 
 /* --------------------------------------------------*/
@@ -166,8 +166,10 @@ h4,
 h5,
 h6,
 p,
-li {
+li,
+span {
   font-family: "Open Sans";
+  /* font-family: "Roboto Mono", */
   font-size: 1.4rem;
   line-height: 1.6;
   color: var(--governer-bay-blue);
@@ -204,11 +206,11 @@ section {
 }
 .container header nav a {
   margin-left: 3rem;
-  padding: 3px 0;
+  padding: 3px;
   background: linear-gradient(
     to bottom,
-    var(--governer-bay-blue) 20%,
-    var(--flame-pea) 80%
+    var(--tulip-tree-peach) 20%,
+    /* #ff6978 20%, */ var(--light-blue) 80%
   );
   background-position: 0 100%;
   background-repeat: repeat-x;
@@ -273,14 +275,60 @@ section {
   /* color: transparent; */
 }
 
+.tagline {
+  margin-top: 2rem;
+  margin-left: 10rem;
+  color: var(--light-blue);
+  font-size: 2rem;
+  font-family: "Roboto Mono";
+  /* text-shadow: 1px 1px 0 var(--light-blue); */
+}
+
+.tagline::after {
+  content: "";
+  display: inline-block;
+  background-color: var(--light-blue);
+  width: 1.4rem;
+  height: 2rem;
+  animation: blink 1.2s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-me-container {
+  margin-top: 10rem;
+}
+
+.about-me-container p {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.about-me-container h2 {
+  font-size: 3.4rem;
+  font-family: "Roboto Mono";
+  text-shadow: var(--text-shadow-headers);
+}
+
 .projects-container {
-  margin-top: 12rem;
+  margin-top: 8rem;
 }
 
 .projects-container h2 {
-  font-size: 4rem;
-  border-top: 5px dotted white;
+  font-size: 3.4rem;
+  font-family: "Roboto Mono";
   border-bottom: 5px dotted var(--wheat-peach);
+  text-shadow: var(--text-shadow-headers);
 }
 
 .projects-container .project {
