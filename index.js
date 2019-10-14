@@ -10,6 +10,7 @@ const lastNameLetters = document.querySelectorAll(".last-name .letter");
 
 const z = document.querySelector(".last-name .z");
 const o = document.querySelector(".last-name .o");
+const tagline = document.querySelector(".tagline");
 
 TweenMax.staggerFrom(
   allLetters,
@@ -50,10 +51,56 @@ TweenLite.to(z, 1, {
   ease: Elastic.easeOut
 }).delay(1.4);
 
+let countZHovers = 0;
 z.addEventListener("mouseenter", () => {
+  countZHovers += 1;
+  console.log(countZHovers);
   TweenMax.to(z, 3, {
     rotation: "+=360",
     transformOrigin: "50% 50%",
     ease: Elastic.easeOut
   });
+
+  if (countZHovers === 3) {
+    tagline.textContent = "> weeee";
+  }
+
+  if (countZHovers === 4) {
+    tagline.textContent = "> ok settle down, please read the rest thank u";
+  }
+
+  if (countZHovers === 7) {
+    tagline.textContent = "> please";
+  }
+
+  if (countZHovers === 10) {
+    tagline.textContent = "> hire me lol ᕕ(◍ᗜ◎)ᕗ";
+  }
 });
+
+// $(".project-image").hover(
+//   function() {
+//     $(this)
+//       .find(".project-hover-links")
+//       .fadeTo(300, 1);
+//   },
+//   function() {
+//     $(this)
+//       .find(".project-hover-links")
+//       .fadeTo(300, 0);
+//   }
+// );
+
+// darken image on hover
+// $(".project-image").hover(
+//   function() {
+//     $(this)
+//       .find("img")
+//       .fadeTo(300, 0.6);
+//   },
+//   function() {
+//     $(this)
+//       .find("img")
+//       .fadeTo(300, 1);
+//   }
+// );
