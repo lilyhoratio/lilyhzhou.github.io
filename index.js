@@ -61,19 +61,15 @@ z.addEventListener("mouseenter", () => {
     ease: Elastic.easeOut
   });
 
-  if (countZHovers === 3) {
+  if (countZHovers === 4) {
     tagline.textContent = "> weeee";
   }
 
-  if (countZHovers === 4) {
+  if (countZHovers === 8) {
     tagline.textContent = "> ok settle down, please read the rest thank u";
   }
 
-  if (countZHovers === 7) {
-    tagline.textContent = "> please";
-  }
-
-  if (countZHovers === 10) {
+  if (countZHovers === 20) {
     tagline.textContent = "> hire me lol ᕕ(◍ᗜ◎)ᕗ";
   }
 });
