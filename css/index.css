@@ -262,6 +262,9 @@ section {
   width: 50rem;
 }
 
+.intro-container .name-container .last-name {
+  margin-left: 5rem;
+}
 /* Individual letters */
 .intro-container .name-container .first-name > *,
 .intro-container .name-container .last-name > * {
