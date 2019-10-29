@@ -179,6 +179,15 @@ a {
   font-family: "Open Sans";
   color: var(--governer-bay-blue);
 }
+
+@media (max-width: 620px) {
+  .container header nav a {
+    margin-bottom: 1.2rem;
+    font-size: 0.5rem;
+    text-align: center;
+    margin-left: 0;
+  }
+}
 section {
   margin: 3rem auto;
 }
@@ -186,7 +195,7 @@ section {
   max-width: 1000px;
   margin: 3rem auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 620px) {
   .container {
     margin-right: 2rem;
     margin-left: 2rem;
@@ -204,32 +213,8 @@ section {
 .container header nav {
   font-size: 2rem;
 }
-.container header nav a {
-  margin-left: 3rem;
-  padding: 1px;
-  background: linear-gradient(
-    to bottom,
-    var(--tulip-tree-peach) 20%,
-    /* #ff6978 20%, */ var(--light-blue) 80%
-  );
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 3px 1px;
-  transition: background-size 0.6s;
-}
-@media (max-width: 500px) {
-  .container header nav a {
-    margin-bottom: 1.2rem;
-    font-size: 2rem;
-    text-align: center;
-    margin-left: 0;
-  }
-}
-.container header nav a:hover {
-  color: var(--cinderella-pink);
-  background-size: 4px 50px;
-}
-@media (max-width: 500px) {
+
+@media (max-width: 620px) {
   .container header nav {
     display: flex;
     justify-content: space-between;
@@ -237,7 +222,36 @@ section {
     order: -1;
   }
 }
-@media (max-width: 500px) {
+
+.container header nav a {
+  margin-left: 3rem;
+  padding: 1px;
+  background: linear-gradient(
+    to bottom,
+    var(--tulip-tree-peach) 20%,
+    var(--light-blue) 80%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 3px 1px;
+  transition: background-size 0.6s;
+}
+
+@media (max-width: 800px) {
+  .container header nav a {
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.container header nav a:hover {
+  color: var(--cinderella-pink);
+  background-size: 4px 50px;
+}
+
+@media (max-width: 620px) {
   .container header {
     display: flex;
     justify-content: space-between;
@@ -278,6 +292,18 @@ section {
   /* color: transparent; */
 }
 
+@media (max-width: 620px) {
+  .intro-container .name-container .first-name,
+  .intro-container .name-container .last-name {
+    font-size: 12rem;
+    width: 40rem;
+  }
+
+  .intro-container .name-container .last-name {
+    margin-left: 0rem;
+  }
+}
+
 .tagline {
   margin-top: 2rem;
   margin-left: 10rem;
@@ -285,6 +311,12 @@ section {
   font-size: 2rem;
   font-family: "Roboto Mono";
   /* text-shadow: 1px 1px 0 var(--light-blue); */
+}
+
+@media (max-width: 620px) {
+  .tagline {
+    margin-left: 0rem;
+  }
 }
 
 .tagline::after {
@@ -336,6 +368,7 @@ section {
 
 .projects-container .project {
   display: flex;
+  flex-wrap: wrap;
   padding: 2rem;
   margin: 1rem;
   border-bottom: 2px dotted var(--wheat-peach);
@@ -345,6 +378,15 @@ section {
 .projects-container .project .project-text {
   width: 49%;
 }
+
+@media (max-width: 800px) {
+  .projects-container .project .project-image,
+  .projects-container .project .project-text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
 .projects-container .project .project-text {
   padding-right: 5rem;
 }
@@ -362,12 +404,10 @@ section {
   text-align: center;
   vertical-align: center;
   border: 1px solid var(--tulip-tree-peach);
-  /* background-color: var(--tulip-tree-peach); */
   border-radius: 2px;
   padding: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  /* box-shadow: 0 6px 6px -6px var(--tulip-tree-peach); */
   transition-duration: 0.5s;
   transition-property: transform;
 }
@@ -388,7 +428,7 @@ section {
 .projects-container .project .project-links a:hover {
   box-shadow: 0 0 3px var(--governer-bay-blue);
   border: var(--governer-bay-blue);
-  transform: skew(-10deg);
+  transform: skew(-5deg);
 }
 
 .projects-container .project .project-image {
@@ -406,7 +446,7 @@ section {
 
 .projects-container .project .project-image:hover img {
   opacity: 0.7;
-  transform: translate3d(0, -30px, 0);
+  transform: translate3d(0, -20px, 0);
 }
 
 /* app & code links in middle of image */
