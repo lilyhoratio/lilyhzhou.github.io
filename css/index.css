@@ -197,13 +197,13 @@ section {
 }
 @media (max-width: 620px) {
   .container {
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 .container header {
   width: 90%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,8 +269,7 @@ section {
 .intro-container .name-container .first-name,
 .intro-container .name-container .last-name {
   display: flex;
-  align-items: flex-start;
-  align-items: center;
+  align-items: flex-end;
   font-size: 16rem;
   margin-top: 2rem;
   width: 50rem;
@@ -279,6 +278,7 @@ section {
 .intro-container .name-container .last-name {
   margin-left: 5rem;
 }
+
 /* Individual letters */
 .intro-container .name-container .first-name > *,
 .intro-container .name-container .last-name > * {
@@ -293,14 +293,22 @@ section {
 }
 
 @media (max-width: 620px) {
+  .intro-container {
+    padding-left: 0rem;
+  }
+
   .intro-container .name-container .first-name,
   .intro-container .name-container .last-name {
-    font-size: 12rem;
-    width: 40rem;
+    font-size: 10rem;
+    width: 30rem;
   }
 
   .intro-container .name-container .last-name {
     margin-left: 0rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
   }
 }
 
@@ -344,6 +352,16 @@ section {
   margin-top: 10rem;
 }
 
+@media (max-width: 620px) {
+  .about-me-container {
+    margin-top: 3rem;
+  }
+
+  .projects-container {
+    margin-top: 3rem;
+  }
+}
+
 .about-me-container p {
   margin-top: 2rem;
   font-size: 1.6rem;
@@ -357,6 +375,12 @@ section {
 
 .projects-container {
   margin-top: 8rem;
+}
+
+@media (max-width: 620px) {
+  .projects-container {
+    margin-top: 3rem;
+  }
 }
 
 .projects-container h2 {
@@ -374,28 +398,35 @@ section {
   border-bottom: 2px dotted var(--wheat-peach);
 }
 
+@media (max-width: 800px) {
+  .projects-container .project {
+    padding: 0rem;
+  }
+}
+
 .projects-container .project .project-image,
 .projects-container .project .project-text {
   width: 49%;
-}
-
-@media (max-width: 800px) {
-  .projects-container .project .project-image,
-  .projects-container .project .project-text {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
 }
 
 .projects-container .project .project-text {
   padding-right: 5rem;
 }
 
+@media (max-width: 800px) {
+  .projects-container .project .project-image,
+  .projects-container .project .project-text {
+    width: 100%;
+    margin-top: 2rem;
+    padding-right: 0rem;
+  }
+}
+
 .projects-container .project .project-links {
   margin-top: 2rem;
   display: flex;
   justify-content: flex-start;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .projects-container .project .project-links a {
@@ -403,26 +434,13 @@ section {
   width: 80px;
   text-align: center;
   vertical-align: center;
-  border: 1px solid var(--tulip-tree-peach);
   border-radius: 2px;
+  border: 1px solid var(--tulip-tree-peach);
   padding: 5px;
   margin-left: 10px;
   margin-right: 10px;
   transition-duration: 0.5s;
   transition-property: transform;
-}
-
-.projects-container .project .project-links a {
-  height: 30px;
-  width: 80px;
-  text-align: center;
-  vertical-align: center;
-  border: 1px solid var(--tulip-tree-peach);
-  /* background-color: var(--tulip-tree-peach); */
-  padding: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-  /* box-shadow: 0 6px 6px -6px var(--tulip-tree-peach); */
 }
 
 .projects-container .project .project-links a:hover {
