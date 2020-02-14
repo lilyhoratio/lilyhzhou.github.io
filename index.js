@@ -12,39 +12,31 @@ const z = document.querySelector(".last-name .z");
 const o = document.querySelector(".last-name .o");
 const tagline = document.querySelector(".tagline");
 
-TweenMax.staggerFrom(
-  allLetters,
-  1,
-  {
-    ease: Elastic.easeOut,
-    scale: 0.7
-  },
-  0.2
-);
+window.onload = function() {
+  // Each letter pops up
+  TweenMax.staggerFrom(
+    allLetters,
+    1,
+    {
+      ease: Elastic.easeOut,
+      scale: 0.7
+    },
+    0.2
+  );
 
-// // Rotates all ZHOU letters
-// TweenMax.staggerTo(
-//   lastNameLetters,
-//   2,
-//   {
-//     rotation: 10,
-//     ease: Elastic.easeOut
-//   },
-//   0.1
-// );
+  // Letter O rotate:
+  TweenMax.to(o, 3.5, {
+    // repeat: 1,
+    rotation: "+=360",
+    transformOrigin: "50% 50%",
+    ease: Elastic.easeOut
+  }).delay(1.3);
 
-// Letter O rotate:
-TweenMax.to(o, 3.5, {
-  // repeat: 1,
-  rotation: "+=360",
-  transformOrigin: "50% 50%",
-  ease: Elastic.easeOut
-}).delay(1.3);
-
-TweenLite.to(z, 1, {
-  rotation: 15,
-  ease: Elastic.easeOut
-}).delay(1.4);
+  TweenLite.to(z, 1, {
+    rotation: 15,
+    ease: Elastic.easeOut
+  }).delay(1.4);
+};
 
 let countZHovers = 0;
 z.addEventListener("mouseenter", () => {
