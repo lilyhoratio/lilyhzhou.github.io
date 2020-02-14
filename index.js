@@ -22,7 +22,7 @@ TweenMax.staggerFrom(
   0.2
 );
 
-// // Rotates all zhou letters
+// // Rotates all ZHOU letters
 // TweenMax.staggerTo(
 //   lastNameLetters,
 //   2,
@@ -33,12 +33,7 @@ TweenMax.staggerFrom(
 //   0.1
 // );
 
-// TweenMax.from(z, 2, {
-//   ease: Bounce.easeOut,
-//   scale: 0
-// });
-
-// // letter o rotates
+// Letter O rotate:
 TweenMax.to(o, 3.5, {
   // repeat: 1,
   rotation: "+=360",
@@ -73,30 +68,3 @@ z.addEventListener("mouseenter", () => {
     tagline.textContent = "> hire me lol ᕕ(◍ᗜ◎)ᕗ";
   }
 });
-
-// $(".project-image").hover(
-//   function() {
-//     $(this)
-//       .find(".project-hover-links")
-//       .fadeTo(300, 1);
-//   },
-//   function() {
-//     $(this)
-//       .find(".project-hover-links")
-//       .fadeTo(300, 0);
-//   }
-// );
-
-// darken image on hover
-// $(".project-image").hover(
-//   function() {
-//     $(this)
-//       .find("img")
-//       .fadeTo(300, 0.6);
-//   },
-//   function() {
-//     $(this)
-//       .find("img")
-//       .fadeTo(300, 1);
-//   }
-// );
