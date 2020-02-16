@@ -4,6 +4,8 @@
 
 This is the source code for my developer portfolio. It's made with vanilla JavaScript, CSS, and the TweenMax animation library.
 
+![lilyhzhou](images/lilyhzhou.png)
+
 ## Installation
 
 1. `git clone https://github.com/lilyhoratio/personal-site.git`
