@@ -529,3 +529,17 @@ h2 {
 .contact-container p {
   font-size: 1.8rem;
 }
+
+.contact-container a {
+  background: var(--link-background-gradient);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 3px 1px;
+  transition: background-size 0.7s;
+  padding: 0px 3px;
+}
+
+.contact-container a:hover {
+  color: white;
+  background-size: 4px 50px;
+}
