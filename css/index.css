@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+@import url("https://indestructibletype.com/fonts/Jost.css");
+
 html,
 body,
 div,
@@ -147,6 +150,11 @@ html {
   --light-blue: #4a8ffe;
   --lavender: #8f6ebe;
   --text-shadow-headers: 1px 2px 1px var(--light-blue);
+  --link-background-gradient: linear-gradient(
+    to bottom,
+    var(--tulip-tree-peach) 20%,
+    var(--light-blue) 80%
+  );
 }
 
 /* --------------------------------------------------*/
@@ -169,15 +177,14 @@ h6,
 p,
 li,
 span {
-  font-family: "Open Sans";
-  /* font-family: "Roboto Mono", */
+  font-family: "Jost", "Open Sans", "Roboto Mono";
   font-size: 1.4rem;
   line-height: 1.6;
   color: var(--governer-bay-blue);
 }
 a {
   text-decoration: none;
-  font-family: "Open Sans";
+  font-family: "Jost", "Open Sans", "Roboto Mono";
   color: var(--governer-bay-blue);
 }
 
@@ -230,16 +237,12 @@ section {
 
 .container header nav a {
   margin-left: 3rem;
-  padding: 1px;
-  background: linear-gradient(
-    to bottom,
-    var(--tulip-tree-peach) 20%,
-    var(--light-blue) 80%
-  );
+  padding: 2px 4px;
+  background: var(--link-background-gradient);
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 3px 1px;
-  transition: background-size 0.6s;
+  transition: background-size 0.7s;
 }
 
 @media (max-width: 800px) {
@@ -369,17 +372,33 @@ section {
 
 .about-me-container p {
   margin-top: 2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
-.about-me-container h2 {
+h2 {
   font-size: 3.4rem;
   font-family: "Roboto Mono";
   text-shadow: var(--text-shadow-headers);
 }
 
+/* When change to LESS/SASS and bundle these variables together */
+.about-me-container a {
+  background: var(--link-background-gradient);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 3px 1px;
+  transition: background-size 0.7s;
+  padding: 0px 3px;
+}
+
+.about-me-container a:hover {
+  color: white;
+  background-size: 4px 50px;
+}
+/* End future variable */
+
 .projects-container {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 @media (max-width: 620px) {
@@ -389,10 +408,7 @@ section {
 }
 
 .projects-container h2 {
-  font-size: 3.4rem;
-  font-family: "Roboto Mono";
   border-bottom: 5px dotted var(--wheat-peach);
-  text-shadow: var(--text-shadow-headers);
 }
 
 .projects-container .project {
@@ -428,7 +444,6 @@ section {
 }
 
 .projects-container .project .project-links {
-  margin-top: 2rem;
   display: flex;
   justify-content: flex-start;
   font-size: 1.5rem;
@@ -436,12 +451,12 @@ section {
 
 .projects-container .project .project-links a {
   height: 30px;
-  width: 80px;
+  width: 70px;
   text-align: center;
   vertical-align: center;
   border-radius: 2px;
   border: 1px solid var(--tulip-tree-peach);
-  padding: 5px;
+  padding: 6px 2px;
   margin-right: 10px;
   transition-duration: 0.5s;
   transition-property: transform;
@@ -509,4 +524,8 @@ section {
   margin-bottom: 4rem;
   color: var(--governer-bay-blue);
   text-shadow: 0 1px 1px var(--flame-pea);
+}
+
+.contact-container p {
+  font-size: 1.8rem;
 }
